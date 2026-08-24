@@ -2175,6 +2175,397 @@ input, select, textarea {
 				color: #777;
 			}
 
+/* ===========================================================
+	   Academic Homepage Styling (Shuotao Diao)
+	   =========================================================== */
+
+	/* --- Color / Typography tweaks --- */
+	body, input, textarea, select {
+		color: #444;
+		font-size: 13.5pt;
+		line-height: 1.75em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #1a2b45;  /* deep navy for headings */
+	}
+
+	a {
+		color: #1d4e89;
+	}
+		a:hover {
+			color: #2d6fba !important;
+		}
+
+	b, strong {
+		color: #1a2b45;
+	}
+
+	em { font-style: italic; }
+
+	/* --- Navigation bar (navy instead of dark gray) --- */
+	#nav {
+		background-color: #1a2b45;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+	}
+		#nav a {
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			color: #e6ecf5;
+		}
+			#nav a:hover {
+				background: #253c5e;
+				color: #fff !important;
+			}
+			#nav a.active {
+				background: #2d507d;
+			}
+				#nav a.active:before {
+					border-top-color: #1a2b45;
+				}
+
+	/* --- Buttons (muted, academic look) --- */
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		background-color: #1d4e89;
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.18);
+		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.25);
+		border-radius: 4px;
+		padding: 0.75em 1.8em;
+		font-weight: 600;
+		font-size: 1em;
+	}
+		.button:hover {
+			background-color: #2562a8;
+		}
+		.button:active {
+			background-color: #163f6e;
+		}
+		.button i { margin-right: 0.4em; }
+
+	/* --- Wrapper layout tweaks: left-align by default in sections --- */
+	.wrapper {
+		text-align: left;
+		padding: 6em 0 6em 0;
+	}
+	.wrapper.style1 { background-color: #ffffff; }
+	.wrapper.style2 { background-color: #f6f8fb; text-shadow: none; }
+	.wrapper.style3 { background-color: #eef2f7; text-shadow: none; }
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 2.5em;
+	}
+		.section-header h2 {
+			font-size: 2.1em;
+			position: relative;
+			padding-bottom: 0.5em;
+			margin-bottom: 0;
+			letter-spacing: -0.01em;
+		}
+		.section-header h2:after {
+			content: '';
+			display: block;
+			width: 60px;
+			height: 3px;
+			background: #1d4e89;
+			margin: 0.6em auto 0 auto;
+			border-radius: 2px;
+		}
+
+	/* --- About / Hero section --- */
+	#about {
+		padding: 8em 0 6em 0;
+		text-align: left;
+	}
+	#about .header, #about header { margin-bottom: 1.5em; }
+	#about h1 {
+		font-size: 2.8em;
+		font-weight: 400;
+		margin-bottom: 0.2em;
+		color: #1a2b45;
+	}
+		#about h1 strong { font-weight: 700; }
+	p.subtitle {
+		font-size: 1.2em;
+		line-height: 1.5em;
+		color: #1d4e89;
+		font-weight: 500;
+		margin-bottom: 1.5em;
+	}
+	#about p {
+		font-size: 1.1em;
+		line-height: 1.8em;
+	}
+	#about .image.profile {
+		display: block;
+		width: 100%;
+		max-width: 280px;
+		margin: 0 auto;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+		border: 4px solid #fff;
+	}
+		#about .image.profile img {
+			border-radius: 6px;
+			width: 100%;
+			display: block;
+		}
+	.contact-inline {
+		margin: 1em 0 1.2em 0;
+		font-size: 1em;
+	}
+	.contact-inline span {
+		display: inline-block;
+		margin-right: 1.6em;
+		margin-bottom: 0.4em;
+	}
+	.contact-inline i {
+		color: #1d4e89;
+		margin-right: 0.35em;
+	}
+	.cv-download { margin-top: 1.2em; }
+
+	/* --- Research Interests list --- */
+	ul.interests {
+		list-style: none;
+		padding-left: 0;
+		margin: 0 auto 2em auto;
+		max-width: 900px;
+		columns: 2;
+		column-gap: 2em;
+	}
+	ul.interests li {
+		padding: 0.35em 0 0.35em 1.6em;
+		position: relative;
+		font-size: 1.05em;
+		break-inside: avoid;
+	}
+	ul.interests li:before {
+		content: "\25AA";
+		color: #1d4e89;
+		position: absolute;
+		left: 0;
+		font-weight: bold;
+	}
+
+	/* --- Research project boxes --- */
+	.research-box {
+		text-align: left;
+		height: 100%;
+		padding: 2em 2em 2.2em 2em;
+		border-top: 3px solid #1d4e89;
+		border-radius: 3px;
+		box-shadow: 0 1px 4px rgba(0,0,0,0.08), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+	}
+	.research-box h3 {
+		font-size: 1.2em;
+		line-height: 1.3em;
+		margin-bottom: 0.3em;
+		color: #1a2b45;
+	}
+	.project-years {
+		display: inline-block;
+		font-size: 0.85em;
+		font-weight: 600;
+		color: #1d4e89;
+		background: #eef4fb;
+		padding: 0.15em 0.7em;
+		border-radius: 3px;
+		margin-bottom: 0.8em;
+	}
+	.research-box p { margin-bottom: 0.75em; font-size: 0.98em; }
+	.research-box p:last-child { margin-bottom: 0; }
+
+	/* --- Publication list --- */
+	.pub-category {
+		font-size: 1.3em;
+		color: #1a2b45;
+		margin: 2.2em 0 0.8em 0;
+		padding-bottom: 0.3em;
+		border-bottom: 2px solid #dde5ef;
+	}
+	.pub-category:first-of-type { margin-top: 0; }
+
+	ol.pub-list {
+		counter-reset: pubcounter;
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 1em;
+	}
+	ol.pub-list li {
+		counter-increment: pubcounter;
+		position: relative;
+		padding: 0.8em 0 0.8em 2.5em;
+		border-bottom: 1px solid #eef0f4;
+		line-height: 1.6em;
+		font-size: 0.98em;
+	}
+	ol.pub-list li:before {
+		content: "[" counter(pubcounter) "]";
+		position: absolute;
+		left: 0;
+		top: 0.8em;
+		font-weight: 600;
+		color: #1d4e89;
+		font-family: 'Consolas', 'Menlo', monospace;
+		font-size: 0.92em;
+	}
+	ol.pub-list.presentations li { padding-left: 2.5em; }
+
+	.pub-authors {
+		display: block;
+		font-weight: 500;
+		color: #1a2b45;
+	}
+	.pub-title {
+		display: block;
+		font-style: italic;
+		margin: 0.15em 0 0.15em 0;
+		color: #2e4060;
+	}
+	.pub-venue {
+		display: block;
+		font-size: 0.96em;
+		color: #555;
+	}
+	.pub-links {
+		display: block;
+		font-size: 0.92em;
+		margin-top: 0.2em;
+	}
+	.pub-links a { font-weight: 500; }
+
+	/* --- Teaching boxes --- */
+	.teaching-box {
+		text-align: left;
+		margin-bottom: 1.5em;
+		padding: 2em 2.2em;
+		border-left: 4px solid #1d4e89;
+		border-radius: 3px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.07), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+	}
+	.teaching-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 0.5em;
+	}
+	.teaching-role {
+		display: inline-block;
+		font-weight: 700;
+		color: #fff;
+		background: #1d4e89;
+		padding: 0.2em 0.8em;
+		border-radius: 3px;
+		font-size: 0.85em;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+	}
+	.teaching-term {
+		font-size: 0.95em;
+		font-weight: 600;
+		color: #555;
+	}
+	.teaching-box h3 {
+		font-size: 1.2em;
+		margin-bottom: 0.2em;
+		color: #1a2b45;
+	}
+	.teaching-school {
+		font-size: 0.95em;
+		color: #5b6f8a;
+		margin-bottom: 0.8em;
+		font-style: italic;
+	}
+	.teaching-box ul {
+		margin-bottom: 0;
+		padding-left: 1.3em;
+	}
+	.teaching-box ul li {
+		padding-left: 0.3em;
+		margin-bottom: 0.3em;
+		line-height: 1.6em;
+	}
+
+	/* --- Contact & Info boxes --- */
+	.info-box {
+		text-align: left;
+		padding: 2em 2.2em;
+		height: 100%;
+		border-radius: 4px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.07), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+	}
+	.info-box h3 {
+		font-size: 1.2em;
+		color: #1a2b45;
+		margin-bottom: 0.8em;
+		padding-bottom: 0.4em;
+		border-bottom: 2px solid #dde5ef;
+	}
+	.contact-list {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 1.5em;
+	}
+	.contact-list li {
+		padding: 0.35em 0 0.35em 0;
+		font-size: 0.98em;
+		line-height: 1.5em;
+	}
+	.contact-list i {
+		color: #1d4e89;
+		width: 1.4em;
+		display: inline-block;
+	}
+	.service-list {
+		list-style: disc;
+		padding-left: 1.3em;
+		margin-bottom: 0;
+	}
+	.service-list li {
+		padding-left: 0.3em;
+		margin-bottom: 0.35em;
+		line-height: 1.6em;
+	}
+	.info-box p { margin-bottom: 0.6em; line-height: 1.6em; }
+
+	/* --- Footer / Copyright --- */
+	#copyright {
+		margin: 3em auto 0 auto;
+		text-align: center;
+		font-size: 0.88em;
+		color: #6c7d94;
+	}
+		#copyright li {
+			border-left-color: #c3cde0;
+			box-shadow: none;
+		}
+		#copyright a { color: #6c7d94; }
+		#copyright a:hover { color: #1d4e89; }
+
+	/* --- Academic responsive tweaks --- */
+	@media screen and (max-width: 980px) {
+		ul.interests { columns: 1; }
+		#about .image.profile { max-width: 240px; }
+	}
+	@media screen and (max-width: 736px) {
+		#about h1 { font-size: 2.1em; }
+		.wrapper { padding: 3em 0; }
+		#about { padding: 5em 0 3em 0; }
+		.section-header h2 { font-size: 1.6em; }
+		.research-box, .teaching-box, .info-box {
+			padding: 1.5em 1.2em;
+		}
+		.teaching-header { flex-direction: column; align-items: flex-start; gap: 0.4em; }
+		ol.pub-list li { padding-left: 2.3em; }
+	}
+
 /* Large */
 
 	@media screen and (max-width: 1280px) {
